@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Street View Scan Result</title>
+    <style>
+        img {
+            max-width: 45%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Scan Result</h2>
+
+    {% if original %}
+        <h3>Original Street View Capture</h3>
+        <img src="{{ original }}" alt="Original Capture">
+    {% endif %}
+
+    {% if result %}
+        <h3>Detected Trees</h3>
+        <img src="{{ result }}" alt="Prediction Result">
+    {% endif %}
+
+    <p>Label: {{ label }}</p>
+
+    <a href="/streetview/">Back to Street View</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tree Detection - Subang Jaya</title>
+</head>
+<body>
+    <h1>Tree Detection from Google Street View (Subang Jaya)</h1>
+
+    {% if image_url %}
+        <h3>Street View Image</h3>
+        <img src="{{ image_url }}" width="500"><br>
+
+        <h3>Prediction Result</h3>
+        <p><strong>Species:</strong> {{ label }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}</p>
+        <img src="{{ result_url }}" width="500"><br>
+        <a href="{{ result_url }}" download>Download Result</a>
+    {% endif %}
+</body>
+</html>
